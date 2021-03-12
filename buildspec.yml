@@ -1,11 +1,14 @@
-version: 0.2
+version: 0.1
 phases:
   install:
     runtime-versions:
         python: 3.8
   build:
     commands:
-      - sam package --template-file template.yaml --s3-bucket lambdatesting-amalvas --output-template-file packaged-template.yml
+#      - sam package --template-file template.yaml --s3-bucket lambdatesting-amalvas --output-template-file packaged-template.yml
+       - aws cloudformation package --template-file template.yaml --s3-bucket lambdatesting-amalvas --output-template-file outputSamTemplate.yml
 artifacts:
+  type: zip
   files:
-    - packaged-template.yml
+    - template.yaml
+    - outputSamTemplate.yml
