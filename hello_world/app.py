@@ -32,11 +32,11 @@ def lambda_handler(event, context):
     #     print(e)
 
     #     raise e
-	print("Second test")
+    #	print("Second test")
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "message": "hello world",
+            "message": "hello world 2nd attempt",
             # "location": ip.text.replace("\n", "")
         }),
     }
