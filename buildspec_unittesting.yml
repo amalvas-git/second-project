@@ -6,4 +6,4 @@ phases:
   build:
     commands:
 #       - pip install --upgrade awscli
-       - python -m unittest test/test_script.py
+       - python -m unittest hello_world/test/test_script.py
