@@ -5,5 +5,5 @@ phases:
         python: 3.8
   build:
     commands:
-       - pip install --upgrade awscli
+#       - pip install --upgrade awscli
        - python -m unittest test/test_script.py
