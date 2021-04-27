@@ -1,16 +1,11 @@
 import unittest
+import hello_world.app
 
 class SimpleTest(unittest.TestCase):
-
-	# Returns True or False.
-	#def test(self):
-	#	self.assertTrue(True)
-
-	def test_split(self):
-        	s = 'hello world'
-        	self.assertEqual(s.split(), ['hello', 'world'])
-       		with self.assertRaises(TypeError):
-            		s.split(2)
+			
+	def test_message(self):
+		result=app.lambda_handler()
+		self.assertEqual(result, "hellow world")
 
 if __name__ == '__main__':
 	unittest.main()
