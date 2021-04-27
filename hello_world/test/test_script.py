@@ -1,10 +1,10 @@
 import unittest
-import hello_world.app
+from hello_world.app import lambda_handler
 
 class SimpleTest(unittest.TestCase):
 			
 	def test_message(self):
-		result=app.lambda_handler()
+		result=lambda_handler()
 		self.assertEqual(result, "hellow world")
 
 if __name__ == '__main__':
