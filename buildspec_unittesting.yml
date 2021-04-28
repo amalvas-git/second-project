@@ -13,7 +13,7 @@ phases:
     commands:
       - apt-get update
       - apt-get install -y jq
-      - mvn clean install
+     # - mvn clean install
       - wget http://www-eu.apache.org/dist/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
       - tar xzf apache-maven-3.8.1-bin.tar.gz
       - ln -s apache-maven-3.8.1 maven
@@ -23,7 +23,7 @@ phases:
   build:
     commands:
 #       - pip install --upgrade awscli
-      - cd $PATH:/sonar-scanner-3.3.0.1492-linux/
+  #    - cd $PATH:/sonar-scanner-3.3.0.1492-linux/
       - mvn test     
       - mvn sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=$Project -Dsonar.organization=$Organization
       - sleep 5
