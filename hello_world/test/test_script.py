@@ -12,7 +12,7 @@ class SimpleTest(unittest.TestCase):
 		data = json.loads(ret["body"])
 		#assert ret["statusCode"] == 200
 		assert "message" in ret["body"]
-		assert data["message"]== "hello world"
+		assert data["message"]== "hi hello world"
 
 if __name__ == '__main__':
 	unittest.main()
