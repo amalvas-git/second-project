@@ -24,6 +24,7 @@ phases:
     commands:
 #       - pip install --upgrade awscli
      # - cd $PATH:/sonar-scanner-3.3.0.1492-linux/
+      - mvn package
       - mvn test     
       - mvn sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=$Project -Dsonar.organization=$Organization
       - sleep 5
